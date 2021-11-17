@@ -7,6 +7,44 @@ using namespace std;
 
 int tab[5][5];
 
+void students() {
+	int stds[4][6];
+	float av[4] = {0};
+	for(int i=0;i<4;i++) {
+		stds[i][0] = i+1;
+	}
+	cout << endl;
+	
+	srand(time(NULL));
+	for(int i=0;i<4;i++) {
+		for(int j=1;j<6;j++) {
+			stds[i][j] = 1+rand()%(6-1+1);
+			cout << stds[i][j] << " ";
+		}
+		cout << endl;
+	}
+	cout << endl;
+	for(int i=0;i<4;i++) {
+		for(int j=1;j<6;j++) {
+			av[i] = av[i]+stds[i][j];
+		}
+		av[i] = av[i]/5;
+		cout << av[i] << endl;
+	}
+	cout << endl;
+	float max=0;
+	for(int i=0;i<4;i++) {
+		if(av[i]>max) max = av[i];
+	}
+	cout << "Highest average is " << max << endl;
+	
+	float min = max;
+	for(int i=0;i<4;i++) {
+		if(av[i]<min) min = av[i];
+	}
+	cout << "Lowest average is " << min << endl;
+}
+
 void max() {
 	int max=0;
 	for(int i=0;i<5;i++) {
@@ -67,5 +105,6 @@ int main() {
 	cout << endl;
 	howmany0();
 	max();
+	students();
 	return 0;
 }

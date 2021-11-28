@@ -1,8 +1,11 @@
 #include <iostream>
+#include <windows.h>
 
 using namespace std;
 
 int main() {
+	
+	SetConsoleTitleA("Hetman field generator");
 	
 	int field[8][8]={0},x,y,a;
 	

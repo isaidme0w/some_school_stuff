@@ -7,9 +7,9 @@ int main() {
 	int field[8][8]={0},x,y,a;
 	
 	do {
-		cout << "Number of row: ";
+		cout << "Number of row(s): ";
 		cin >> x;
-		cout << "Number of column: ";
+		cout << "Number of column(s): ";
 		cin >> y;
 	}
 	while(x<0 || x>8 || y<0 || y>8);

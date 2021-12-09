@@ -43,6 +43,31 @@ void students() {
 		if(av[i]<min) min = av[i];
 	}
 	cout << "Lowest average is " << min << endl;
+
+	cout << endl;
+
+	float av2[5] = {0};
+	max = 0;
+
+	for(int i=1;i<6;i++) {
+		for(int j=0;j<4;j++) {
+			av2[i-1] += stds[j][i];
+		}
+		av2[i-1] /= 5;
+		cout << av2[i-1] << endl;
+	}
+	cout << endl;
+	
+	for(int i=0;i<5;i++) {
+		if(max<av2[i]) max = av2[i];
+	}
+	cout << "Highest subject average: " << max << endl;
+	min = max;
+
+	for(int i=0;i<5;i++) {
+		if(min>av2[i]) min = av2[i];
+	}
+	cout << "Lowest subject average: " << min << endl;
 }
 
 void max() {

@@ -8,6 +8,9 @@ using namespace std;
 int tab[5][5];
 
 void students() {
+
+	// task nr 4
+
 	int stds[4][6];
 	float av[4] = {0};
 	for(int i=0;i<4;i++) {

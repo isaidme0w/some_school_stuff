@@ -22,9 +22,9 @@ int main() {
 	for( int i = 0; i < n; i++ ) tab[i] = min + rand() % ( a );
 	write(tab, n);
 	
-	for( int i = min; i <= a; i++ ) {
+	for( int i = 0; i < a; i++ ) {
 		for( int j = 0; j < n; j++ ) {
-			if( tab[j] == i ) count[i - 1]++;
+			if( tab[j] == i ) count[i]++;
 		}
 	}
 	
